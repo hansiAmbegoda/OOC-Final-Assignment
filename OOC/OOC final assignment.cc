@@ -1,7 +1,9 @@
 #include <iostream>
 #include<string>
 #define SIZE 5
+
 using namespace std;
+
 class Seller;
 class Order;
 class Payment;
@@ -9,41 +11,44 @@ class Customer;
 class Report;
 class Admin;
 class Product;
+
 //Payment Class
 class Payment{
- private:
- int paymentID;
- string paymentType;
- Seller *sell[SIZE];
- public:
- Payment();
- Payment(int PID,string pType ){
- paymentID = PID;
- paymentType = pType;
- }
- void displayPayment();
- ~Payment(){
- cout << "Delete Payment" << paymentID << endl;
- }
+  private:
+   int paymentID;
+   string paymentType;
+   Seller *sell[SIZE];
+  public:
+   Payment();
+   Payment(int PID,string pType ){
+     paymentID = PID;
+     paymentType = pType;
+   }
+   void displayPayment();
+   ~Payment(){
+     cout << "Delete Payment" << paymentID << endl;
+   }
 };
+
+
 //Product Class
 class Product{
  private:
- string productName;
- int productID;
+  string productName;
+  int productID;
  
-public:
- Product();
- Product(string pname,int PID){
- productName = pname;
- productID = PID; 
+ public:
+  Product();
+  Product(string pname,int PID){
+    productName = pname;
+    productID = PID; 
  }
  void displayProduct(){
- cout << "Product Name : " << productName << endl;
- cout << "Product ID : " << productID << endl;
+   cout << "Product Name : " << productName << endl;
+   cout << "Product ID : " << productID << endl;
  }
  ~Product(){
- cout << "Delete Product" << endl;
+   cout << "Delete Product" << endl;
  }
 };
 //Customer Class
